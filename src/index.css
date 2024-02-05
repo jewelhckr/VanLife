@@ -1,0 +1,9 @@
+*{
+ 
+  /* background-repeat: no-repeat; */
+}
+.myComponent{
+  background-image: url('./assets/vanlanding.png');
+}
+
+
