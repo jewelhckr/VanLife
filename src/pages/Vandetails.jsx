@@ -17,17 +17,17 @@ const Vandetails = () => {
     <>
         <div className="container">
             <br />
-        <i class="bi bi-arrow-left fs-6"></i> <Link to={'/vans'} className='fs-6 text-dark mb-3'>Back to all vans</Link><br /><br />
+        <i className="bi bi-arrow-left fs-6"></i> <Link to={'/vans'} className='fs-6 text-dark mb-3'>Back to all vans</Link><br /><br />
             {
                 details ? (
 
              <>
                     <div>
                         <img className='container ' src={details.imageUrl} alt="" /><br />
-                        <button className='btn btn transparent text-white mt-5 fw-bold' style={{backgroundColor:'#e17654'}}>{details.type}</button>
-                        <h1>{details.name}</h1>
+                        <button className='btn btn transparent text-white mt-5 fw-bold' style={{ backgroundColor: details.color || '#e17654' }}>{details.type}</button><br />
+                        <h1 className='fs-1 fw-bold'>{details.name}</h1>
                         <span className='fs-3 fw-bold'>{details.price}$</span> <span>/day</span>
-                        <p><b>Vehicle Description : </b> {details.description}</p>
+                        <p className=' fw-bold'> {details.description}</p>
                     
                         <button className='btn btn-transparent  col-12 fw-bold p-3 text-white' style={{backgroundColor:'#fe8d38', margin:"10% 0% "}}>Rent this van</button>
 
@@ -38,6 +38,10 @@ const Vandetails = () => {
                             )}
     
                      </div>
+                     
+<footer className=" bg-dark text-white p-3 ">
+        <p className="text-center fs-4">©️ 2022 #VANLIFE</p>
+      </footer>
                      </>
   )
 }

@@ -12,16 +12,12 @@ function App() {
 
   return (
     <>
-    <Navbar/>
-
     <Routes>
     <Route path='' element={<Vanlandingpage/>}/>
     <Route path="about" element={ <About/>}/>
     <Route path='vans' element={<Vans/>}/>
     <Route path='/api/vans/:id' element={<Vandetails/>}/>
     </Routes>
-
-
     </>
   )
 }

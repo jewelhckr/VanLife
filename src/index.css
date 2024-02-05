@@ -1,6 +1,10 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Inter:wght@300;400;600&display=swap');
+
 *{
- 
-  /* background-repeat: no-repeat; */
+  font-family: 'Agbalumo', system-ui;
+font-family: 'Inter', sans-serif;
 }
 .myComponent{
   background-image: url('./assets/vanlanding.png');
