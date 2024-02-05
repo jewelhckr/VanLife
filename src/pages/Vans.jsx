@@ -6,7 +6,7 @@ const Vans = () => {
     const  [vans, setVans] = useState([])
     useEffect(() => {
    
-        axios.get('https://vanlife-h9ye.onrender.com//api/vans').then((data)=>{
+        axios.get('https://vanlife-h9ye.onrender.com/api/vans').then((data)=>{
             console.log(data.data);
             setVans(data.data)
         }).catch((err)=>{
