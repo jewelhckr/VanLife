@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 const Vans = () => {
     const  [vans, setVans] = useState([])
     useEffect(() => {
-      // https://vanlife-h9ye.onrender.com/
-        axios.get('http://localhost:3000/api/vans').then((data)=>{
+   
+        axios.get('https://vanlife-h9ye.onrender.com//api/vans').then((data)=>{
             console.log(data.data);
             setVans(data.data)
         }).catch((err)=>{
@@ -31,7 +31,7 @@ const Vans = () => {
         <div className="container mt-5">
                 <h4 className='fs-2 text-black fw-bold'>Explore Our Van Options</h4>
                 <br />
-                <div className=" d-flex gap-4">
+                <div className=" d-flex gap-2">
                 <div className='col-md-3 col-lg-1 '>
                     <button className='btn btn-transparent' style={{backgroundColor:"#feead1", fontFamily:'monospace'}}>Simple</button>
                     </div>                    
@@ -44,7 +44,7 @@ const Vans = () => {
                     <button className='btn btn-transparent' style={{backgroundColor:"#feead1"}}>Rugged</button>
                     </div>
                     
-                    <div className='col-md-3'>
+                    <div className='col-md-5 col-lg-2'>
                     <button className='btn btn-transparent text-decoration-underline'>Clear filter</button>
                     </div>                </div>
         </div>
