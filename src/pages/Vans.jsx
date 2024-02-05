@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 const Vans = () => {
     const  [vans, setVans] = useState([])
     useEffect(() => {
-        axios.get('https://vanlife-h9ye.onrender.com/api/vans').then((data)=>{
+      // https://vanlife-h9ye.onrender.com/
+        axios.get('http://localhost:3000/api/vans').then((data)=>{
             console.log(data.data);
             setVans(data.data)
         }).catch((err)=>{
