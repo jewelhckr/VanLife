@@ -7,7 +7,7 @@ const Vandetails = () => {
     const  [details, setDetails] = useState([]);
     useEffect(() => {
         // https://vanlife-h9ye.onrender.com/
-        axios.get(` https://vanlife-h9ye.onrender.com/api/vans/${id}`).then((res) =>{
+        axios.get(`https://vanlife-h9ye.onrender.com/api/vans/${id}`).then((res) =>{
             console.log(res.data);
             setDetails(res.data);
         }) 
