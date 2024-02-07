@@ -17,7 +17,7 @@ const Vanlandingpage = () => {
           Rent the perfect van to make your perfect road trip.
         </p>
         <p></p>
-        <Link to={"/vans"}>
+        <Link to={"/signup"}>
           <button
             className="btn btn-transparent  col-12 fw-bold p-3 text-white"
             style={{ backgroundColor: "#fe8d38", margin: "10% 0% " }}
