@@ -18,7 +18,7 @@ const Login = () => {
               className="col-md-3 gap-3  d-flex list-unstyled"
               style={{ cursor: "pointer" }}
             >
-              <Link to={"/"} className="text-decoration-none text-black ">
+              <Link to={"/host"} className="text-decoration-none text-black ">
                 Host
               </Link>
               <Link to={"/about"} className="text-decoration-none text-black ">
