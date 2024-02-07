@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
-    <nav className="navbar bg-body-tertiary">
+        <div style={{backgroundColor:'#fef6ed'}}>
+
+     
+    <nav className="navbar ">
   <div className="container-fluid animate__animated animate__fadeIn">
   <Link to={"/"} className='text-decoration-none navbar-brand fw-bold '>#VANLIFE</Link> 
 
@@ -37,7 +40,7 @@ const About = () => {
       <footer className=" bg-dark text-white p-4 ">
         <p className="text-center fs-4">©️ 2022 #VANLIFE</p>
       </footer>
-
+      </div>
     </>
   );
 };

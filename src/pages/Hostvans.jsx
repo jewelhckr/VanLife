@@ -106,7 +106,7 @@ const Hostvans = () => {
           <br />
           <span>{item.price}$/day</span>
         </div>
-        <span>Edit</span>
+
       </div>
     </div>
   </div>

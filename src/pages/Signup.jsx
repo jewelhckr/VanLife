@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-const Login = () => {
+
+const Signup = () => {
   return (
     <>
       <div style={{ backgroundColor: "#fef7ec" }}>
@@ -32,11 +33,8 @@ const Login = () => {
           </div>
         </nav>
         <br />
-        <br />
         <div className="">
-          <h5 className="text-center fw-bold fs-2 mt-5">
-            Sign into your account{" "}
-          </h5>
+          <h5 className="text-center fw-bold fs-2 mt-2">Sign up vans life..</h5>
           <br />
           <br />
 
@@ -44,7 +42,25 @@ const Login = () => {
             <input
               className="form-control my-2"
               type="text"
+              placeholder="Enter full name"
+            />
+
+            <input
+              className="form-control my-2"
+              type="text"
+              placeholder="+234"
+            />
+
+            <input
+              className="form-control my-2"
+              type="text"
               placeholder="Email"
+            />
+
+            <input
+              className="form-control my-2"
+              type="text"
+              placeholder="Gender"
             />
             <input
               className="form-control my-2"
@@ -55,16 +71,17 @@ const Login = () => {
               className="btn btn-transparent  w-100 fw-bold p-3 text-white"
               style={{ backgroundColor: "#fe8d38", margin: "5% 0% " }}
             >
-              Sign in
+              Sign up
             </button>
 
             <br />
             <br />
 
             <div className="text-center">
-              <span>Don't have an account?</span>
-              <Link to={'/signup'} className="text-decoration-none">
-              <span style={{ color: "#fe8d38" }}>Create one now</span>
+              <span>Already have an account?</span>
+              <Link className="text-decoration-none" to={'/login'}>
+              
+              <span  style={{ color: "#fe8d38" }}>Login here</span>
               </Link>
             </div>
             <br />
@@ -77,4 +94,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

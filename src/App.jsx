@@ -13,6 +13,7 @@ import Hostvans from './pages/Hostvans'
 import HostvansId from './pages/HostvansId'
 import Hostreviews from './pages/Hostreviews'
 import Hostincome from './pages/Hostincome'
+import Signup from './pages/Signup'
 
 function App() {
 
@@ -21,8 +22,9 @@ function App() {
     <>
     <Routes>
     <Route path='' element={<Vanlandingpage/>}/>
-    <Route path="about" element={ <About/>}/>
+    <Route path="/signup" element= {<Signup/>} />
     <Route path='login' element={<Login/>}/>
+    <Route path="about" element={ <About/>}/>
     <Route path='vans' element={<Vans/>}/>
     <Route path='/api/vans/:id' element={<Vandetails/>}/>
     <Route path="host" element={<Host/>}/>

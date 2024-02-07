@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import imageSrc from '../assets/peachcar.png';
-import  imagetwo from '../assets/bluecar.png'
-import  imagethree from '../assets/greencar.png'
+import imageSrc from "../assets/peachcar.png";
+import imagetwo from "../assets/bluecar.png";
+import imagethree from "../assets/greencar.png";
 import Footer from "../components/Footer";
 
 const Host = () => {
-  
   return (
     <>
       <div style={{ backgroundColor: "#fef6ed" }}>
@@ -37,31 +36,32 @@ const Host = () => {
           </div>
         </nav>
 
-         
-              <div className="container d-flex gap-2">
+        <div className="container d-flex gap-2">
           <div className="col-md-3 col-lg-1 ">
-            <Link to={'/host'}>
-            <button className="btn btn-transparent text-dark fw-bold  text-decoration-underline">
-              Dashboard
-            </button>
-            
+            <Link to={"/host"}>
+              <button className="btn btn-transparent text-dark fw-bold  text-decoration-underline">
+                Dashboard
+              </button>
             </Link>
           </div>
           <div className="col-md-3 col-lg-1 ">
-            <Link to={'/income'}><button className="btn btn-transparent">Income</button></Link>
+            <Link to={"/income"}>
+              <button className="btn btn-transparent">Income</button>
+            </Link>
           </div>
           <div className="col-md-3 col-lg-1 ">
-            <Link to={'/host/vans'}>
-            
-            <button className="btn btn-transparent text-decoration-none ">Vans</button>
+            <Link to={"/host/vans"}>
+              <button className="btn btn-transparent text-decoration-none ">
+                Vans
+              </button>
             </Link>
           </div>
           <div className="col-md-5 col-lg-2">
-          <Link to={'/reviews'}><button className="btn btn-transparent ">Reviews</button></Link>  
+            <Link to={"/reviews"}>
+              <button className="btn btn-transparent ">Reviews</button>
+            </Link>
           </div>
         </div>
-
-
       </div>
 
       <div
@@ -110,12 +110,8 @@ const Host = () => {
         </div>
       </div>
 
-
       <div style={{ backgroundColor: "#fef6ed", padding: "10px" }}>
-        <div
-          className="d-flex justify-content-between align-items-center p-4"
-          
-        >
+        <div className="d-flex justify-content-between align-items-center p-4">
           <p className="m-0">
             <span
               className="fw-bold"
@@ -123,75 +119,65 @@ const Host = () => {
             >
               Your listed vans
             </span>
-           
           </p>
           <span>View all</span>
-
         </div>
-        
+
         <div className="container bg-white p-3">
-  <div className="row align-items-center">
-    <div className="col-2">
-      <img src={imageSrc} alt="" className="img-fluid" />
-    </div>
-    <div className="col">
-      <div className="d-flex justify-content-between align-items-center">
-        <div>
-          <span className="fw-bold text-dark">Modest Explorer</span>
-          <br />
-          <span>$60/day</span>
+          <div className="row align-items-center">
+            <div className="col-2">
+              <img src={imageSrc} alt="" className="img-fluid" />
+            </div>
+            <div className="col">
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <span className="fw-bold text-dark">Modest Explorer</span>
+                  <br />
+                  <span>$60/day</span>
+                </div>
+                <span>Edit</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <span>Edit</span>
-      </div>
-    </div>
-  </div>
-</div>
 
-   
-
-      <div className="container bg-white p-3 mt-3 mb-3">
-  <div className="row align-items-center">
-    <div className="col-2">
-      <img src={imagetwo} alt="" className="img-fluid" />
-    </div>
-    <div className="col">
-      <div className="d-flex justify-content-between align-items-center">
-        <div>
-          <span className="fw-bold text-dark">Beach bum</span>
-          <br />
-          <span>$80/day</span>
+        <div className="container bg-white p-3 mt-3 mb-3">
+          <div className="row align-items-center">
+            <div className="col-2">
+              <img src={imagetwo} alt="" className="img-fluid" />
+            </div>
+            <div className="col">
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <span className="fw-bold text-dark">Beach bum</span>
+                  <br />
+                  <span>$80/day</span>
+                </div>
+                <span>Edit</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <span>Edit</span>
-      </div>
-    </div>
-  </div>
-</div>
 
-
-      <div className="container bg-white p-3 mb-5">
-        
-  <div className="row align-items-center">
-    <div className="col-2">
-      <img src={imagethree} alt="" className="img-fluid" />
-    </div>
-    <div className="col">
-      <div className="d-flex justify-content-between align-items-center">
-        <div>
-          <span className="fw-bold text-dark">Green wonder</span>
-          <br />
-          <span>$70/day</span>
+        <div className="container bg-white p-3 mb-5">
+          <div className="row align-items-center">
+            <div className="col-2">
+              <img src={imagethree} alt="" className="img-fluid" />
+            </div>
+            <div className="col">
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <span className="fw-bold text-dark">Green wonder</span>
+                  <br />
+                  <span>$70/day</span>
+                </div>
+                <span>Edit</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <span>Edit</span>
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-      </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };

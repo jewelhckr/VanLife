@@ -38,27 +38,32 @@ const Hostreviews = () => {
 
         <div className="container d-flex gap-2">
           <div className="col-md-3 col-lg-1 ">
-            <Link to={'/host'}>
-            <button className="btn btn-transparent text-dark fw-bold  text-decoration-none">
-              Dashboard
-            </button>
-            
+            <Link to={"/host"}>
+              <button className="btn btn-transparent text-dark fw-bold  text-decoration-none">
+                Dashboard
+              </button>
             </Link>
           </div>
           <div className="col-md-3 col-lg-1 ">
-            <Link to={'/income'}><button className="btn btn-transparent">Income</button></Link>
+            <Link to={"/income"}>
+              <button className="btn btn-transparent">Income</button>
+            </Link>
           </div>
           <div className="col-md-3 col-lg-1 ">
-            <Link to={'/host/vans'}>
-            
-            <button className="btn btn-transparent text-decoration-none ">Vans</button>
+            <Link to={"/host/vans"}>
+              <button className="btn btn-transparent text-decoration-none ">
+                Vans
+              </button>
             </Link>
           </div>
           <div className="col-md-5 col-lg-2">
-          <Link to={'/reviews'}><button className="btn btn-transparent fw-bold text-decoration-underline">Reviews</button></Link>  
+            <Link to={"/reviews"}>
+              <button className="btn btn-transparent fw-bold text-decoration-underline">
+                Reviews
+              </button>
+            </Link>
           </div>
         </div>
-
       </div>
       <div style={{ backgroundColor: "#fef6ed", padding: "10px" }}>
         <div className="d-flex justify-content-between align-items-center  container">
