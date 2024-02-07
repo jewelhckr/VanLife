@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import inCome from '../assets/vanchart.png'
 import Footer from "../components/Footer";
 
 const Hostincome = () => {
@@ -77,7 +78,7 @@ const Hostincome = () => {
           <br />
           <br />
           <img
-            src="src/assets/vanchart.png"
+            src={inCome}
             alt=""
             className="container-fluid col-lg-7"
           />
