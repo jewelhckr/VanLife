@@ -14,12 +14,29 @@ import HostvansId from './pages/HostvansId'
 import Hostreviews from './pages/Hostreviews'
 import Hostincome from './pages/Hostincome'
 import Signup from './pages/Signup'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Mock from './pages/Mock'
 
 function App() {
 
 
   return (
     <>
+    <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+/>
+
+<ToastContainer />
     <Routes>
     <Route path='' element={<Vanlandingpage/>}/>
     <Route path="/signup" element= {<Signup/>} />
@@ -28,6 +45,7 @@ function App() {
     <Route path='vans' element={<Vans/>}/>
     <Route path='/api/vans/:id' element={<Vandetails/>}/>
     <Route path="host" element={<Host/>}/>
+    <Route path='mock' element={<Mock/>}/>
     <Route path='host/vans' element={<Hostvans/>}/>
     <Route path='/api/host/vans/:id' element={<HostvansId/>}/>
     <Route path='reviews' element={<Hostreviews/>} />

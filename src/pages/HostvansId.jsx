@@ -130,6 +130,7 @@ const HostvansId = () => {
                         : ""
                     }`}
                     onClick={() => handleTabClick("details")}
+                    style={{cursor:'pointer'}}
                   >
                     Details
                   </span>
@@ -140,6 +141,7 @@ const HostvansId = () => {
                         : ""
                     }`}
                     onClick={() => handleTabClick("pricing")}
+                    style={{cursor:'pointer'}}
                   >
                     Pricing
                   </span>
@@ -150,6 +152,7 @@ const HostvansId = () => {
                         : ""
                     }`}
                     onClick={() => handleTabClick("photos")}
+                    style={{cursor:'pointer'}}
                   >
                     Photos
                   </span>
