@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import Auth from '../components/Auth'
 
 const Hostvans = () => {
     const  [data, setData] = useState([])
@@ -18,6 +19,7 @@ const Hostvans = () => {
       }, [])
   return (
     <>
+    <Auth/>
       <div style={{ backgroundColor: "#fef6ed" }}>
         <nav className="navbar p-4">
           <div className="container-fluid ">
@@ -46,7 +48,7 @@ const Hostvans = () => {
           </div>
         </nav>
 
-        <div className="container d-flex gap-2">
+        <div className="container d-flex ">
           <div className="col-md-3 col-lg-1 ">
             <Link to={'/host'}>
             <button className="btn btn-transparent text-dark fw-bold text-decoration-none">

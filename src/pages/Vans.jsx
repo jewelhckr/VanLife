@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Auth from "../components/Auth";
 
 const Vans = () => {
   const [vans, setVans] = useState([]);
@@ -14,9 +15,10 @@ const Vans = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+    }, []);
   return (
     <>
+<Auth/>
       <div style={{ backgroundColor: "#fef6ed" }}>
         <nav className="navbar ">
           <div className="container-fluid animate__animated animate__fadeIn">
@@ -81,17 +83,17 @@ const Vans = () => {
           </div>
         </div>
 
-        <div className="container mt-5">
-          <div className="row gap-3">
+        <div className="container mt-5 gap- ">
+          <div className="row">
             {vans.map((van) => (
               <div key={van.id} className="col-md-4">
-                <img src={van.imageUrl} alt="" className="w-100 mb-2" />
+                <img src={van.imageUrl} alt="" className="w-100 mb-2"/>
                 <span className=" fs-4 fw-bold">{van.name}</span>
                 <span className="float-end fs-4 fw-bold">
                   Price: ${van.price}
                 </span>
-
                 <div>
+            
                   <Link
                     to={`/api/vans/${van.id}`}
                     className="text-decoration-none text-dark mt-3"
@@ -103,8 +105,8 @@ const Vans = () => {
                       {van.type}
                     </button>
                   </Link>
-
-                  <span className="float-end">/day</span>
+                  <span className="float-end mb-5">/day</span>
+                  
                 </div>
               </div>
             ))}

@@ -1,15 +1,55 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import imageSrc from "../assets/peachcar.png";
 import imagetwo from "../assets/bluecar.png";
 import imagethree from "../assets/greencar.png";
 import Footer from "../components/Footer";
+import axios from "axios";
 
 const Host = () => {
+  let navigate = useNavigate();
+  const [userinfo, setUserData] = useState("");
+  let url = "http://localhost:3000/van/dashboard";
+  const token = localStorage.token;
+  useEffect(() => {
+    getUserName();
+  }, []);
+
+  const getUserName = () => {
+    console.log("Function was seeennn");
+    axios
+      .get(url, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': "application/json",
+          "Content-type": "application/json",
+          // bearer:`Bearer ${localStorage.userToken}`,
+        },
+      })
+      .then((res) => {
+        if (res.data.status === false) {
+          localStorage.removeItem('token')
+          navigate("/login");
+        } else {
+          console.log(res);
+          console.log(res.data.userDetails.firstName);
+          setUserData(res.data.userDetails.firstName);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <>
       <div style={{ backgroundColor: "#fef6ed" }}>
         <nav className="navbar p-4">
+          <div>
+            Welcome{" "}
+            <span className="fw-bold text-secondary">
+              {userinfo}
+            </span>
+          </div>
           <div className="container-fluid ">
             <Link
               to={"/"}
@@ -36,7 +76,7 @@ const Host = () => {
           </div>
         </nav>
 
-        <div className="container d-flex gap-2">
+        <div className="container-fluid d-flex gap-">
           <div className="col-md-3 col-lg-1 ">
             <Link to={"/host"}>
               <button className="btn btn-transparent text-dark fw-bold  text-decoration-underline">
@@ -56,7 +96,7 @@ const Host = () => {
               </button>
             </Link>
           </div>
-          <div className="col-md-5 col-lg-2">
+          <div className="col-md-3 col-lg-1 ">
             <Link to={"/reviews"}>
               <button className="btn btn-transparent ">Reviews</button>
             </Link>

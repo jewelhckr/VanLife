@@ -17,6 +17,7 @@ const Vandetails = () => {
 
   return (
     <>
+    <Auth/>
       <div style={{ backgroundColor: "#fef6ed" }}>
         <div className="container">
           <br />

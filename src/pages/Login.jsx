@@ -32,6 +32,8 @@ const Login = (e) => {
           progress: undefined,
           theme: "light",
         })
+        localStorage.userToken=email
+        localStorage.token = res.data.token
         setTimeout(() => {
           navigate('/host');
           
