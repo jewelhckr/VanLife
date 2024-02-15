@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Auth = () => {
     let navigate = useNavigate();
-    let url = "http://localhost:3000/van/dashboard";
+    let url = "   https://vanlife-h9ye.onrender.com/van/dashboard";
     const token = localStorage.token;
     useEffect(() => {
       getUserName();
