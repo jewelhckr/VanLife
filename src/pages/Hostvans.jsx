@@ -6,8 +6,10 @@ import Auth from '../components/Auth'
 
 const Hostvans = () => {
     const  [data, setData] = useState([])
-    let url = 'http://localhost:3000/api/host/vans'
-    // 'https://vanlife-h9ye.onrender.com/api/host/vans'
+    let url = 'https://vanlife-h9ye.onrender.com/api/host/vans'
+    // 'http://localhost:3000/api/host/vans'
+    
+ 
     useEffect(() => {
    
         axios.get(url).then((data)=>{

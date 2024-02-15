@@ -11,7 +11,8 @@ const Host = () => {
   let navigate = useNavigate();
   const [userinfo, setUserData] = useState("");
   const [loading, setLoading] = useState(true)
-  let url = "http://localhost:3000/van/dashboard";
+  // let url = "http://localhost:3000/van/dashboard";
+  let url = 'https://vanlife-h9ye.onrender.com/van/dashboard'
   const token = localStorage.token;
   useEffect(() => {
     getUserName();

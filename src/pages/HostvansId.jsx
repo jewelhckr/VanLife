@@ -14,7 +14,7 @@ const HostvansId = () => {
   };
 
   useEffect(() => {
-    let url = `http://localhost:3000/api/host/vans/${id}`;
+    let url = `https://vanlife-h9ye.onrender.com/api/host/vans/${id}`;
     axios
       .get(url)
       .then((response) => {

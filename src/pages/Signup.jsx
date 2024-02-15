@@ -19,7 +19,8 @@ const Signup = (e) => {
 
   
 
-  let url = 'http://localhost:3000/van/signup'
+  // let url = 'http://localhost:3000/van/signup'
+  let url = 'https://vanlife-h9ye.onrender.com/van/signup'
   const signup = ()=>{
     let userForm={
       firstName,
