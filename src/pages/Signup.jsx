@@ -102,7 +102,6 @@ const Signup = (e) => {
 
         <br />
         <div className="">
-          {firstName}
           <h5 className="text-center fw-bold fs-2 mt-2">Sign up vans life..</h5>
           <br />
           <br />
