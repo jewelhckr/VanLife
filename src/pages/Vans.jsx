@@ -2,11 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Auth from "../components/Auth";
+import  loadingGif from '../assets/pinkloading.gif'
 
 
 const Vans = () => {
   const [vans, setVans] = useState([]);
   const [pickedVan, setPickedVan] = useState(null);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     axios
@@ -14,9 +16,11 @@ const Vans = () => {
       .then((response) => {
         console.log(response.data);
         setVans(response.data);
+        setLoading(false)
       })
       .catch((err) => {
         console.log(err);
+        setLoading(false)
       });
   }, []);
 
@@ -58,7 +62,12 @@ const Vans = () => {
           </div>
         </nav>
 
-        <div className="container mt-5">
+    {
+      loading ? (
+        <img src={loadingGif} alt="" />
+      ):(
+      <>
+         <div className="container mt-5">
           <h4 className="fs-2 text-black fw-bold">Explore Our Van Options</h4>
           <br />
           <div className="d-flex gap-2">
@@ -125,6 +134,10 @@ const Vans = () => {
         <footer className=" bg-dark text-white p-4 ">
           <p className="text-center fs-4">©️ 2022 #VANLIFE</p>
         </footer>
+      </>
+      )
+    }
+       
       </div>
     </>
   );

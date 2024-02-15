@@ -3,12 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import imageSrc from "../assets/peachcar.png";
 import imagetwo from "../assets/bluecar.png";
 import imagethree from "../assets/greencar.png";
+import  loadingGif from '../assets/pinkloading.gif'
 import Footer from "../components/Footer";
 import axios from "axios";
 
 const Host = () => {
   let navigate = useNavigate();
   const [userinfo, setUserData] = useState("");
+  const [loading, setLoading] = useState(true)
   let url = "http://localhost:3000/van/dashboard";
   const token = localStorage.token;
   useEffect(() => {
@@ -34,10 +36,13 @@ const Host = () => {
           console.log(res);
           console.log(res.data.userDetails.firstName);
           setUserData(res.data.userDetails.firstName);
+          setLoading(false)
+
         }
       })
       .catch((err) => {
         console.log(err);
+        setLoading(false)
       });
   };
   return (
@@ -75,8 +80,12 @@ const Host = () => {
             </ul>
           </div>
         </nav>
-
-        <div className="container-fluid d-flex gap-">
+    {
+      loading ? (
+        <img src={loadingGif} alt="" />
+      ): (
+        <>
+         <div className="container-fluid d-flex gap-">
           <div className="col-md-3 col-lg-1 ">
             <Link to={"/host"}>
               <button className="btn btn-transparent text-dark fw-bold  text-decoration-underline">
@@ -102,7 +111,7 @@ const Host = () => {
             </Link>
           </div>
         </div>
-      </div>
+      
 
       <div
         className="container-fluid p-4"
@@ -216,6 +225,11 @@ const Host = () => {
             </div>
           </div>
         </div>
+          </div>
+        </>
+      )
+    }
+       
       </div>
       <Footer />
     </>
