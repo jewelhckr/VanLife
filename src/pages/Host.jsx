@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import imageSrc from "../assets/peachcar.png";
 import imagetwo from "../assets/bluecar.png";
 import imagethree from "../assets/greencar.png";
-import  loadingGif from '../assets/pinkloading.gif'
+import  loadingGif from '../assets/vanbus.gif'
 import Footer from "../components/Footer";
 import axios from "axios";
 
@@ -11,8 +11,8 @@ const Host = () => {
   let navigate = useNavigate();
   const [userinfo, setUserData] = useState("");
   const [loading, setLoading] = useState(true)
-  // let url = "http://localhost:3000/van/dashboard";
-  let url = 'https://vanlife-h9ye.onrender.com/van/dashboard'
+  let url = "http://localhost:3000/van/dashboard";
+  // let url = 'https://vanlife-h9ye.onrender.com/van/dashboard'
   const token = localStorage.token;
   useEffect(() => {
     getUserName();

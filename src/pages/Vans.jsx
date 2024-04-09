@@ -2,14 +2,14 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Auth from "../components/Auth";
-import  loadingGif from '../assets/pinkloading.gif'
+import  loadingGif from '../assets/vanbus.gif'
 
 
 const Vans = () => {
   const [vans, setVans] = useState([]);
   const [pickedVan, setPickedVan] = useState(null);
   const [loading, setLoading] = useState(true)
-
+  // https://vanlife-h9ye.onrender.com
   useEffect(() => {
     axios
       .get("https://vanlife-h9ye.onrender.com/api/vans")
@@ -64,7 +64,7 @@ const Vans = () => {
 
     {
       loading ? (
-        <img src={loadingGif} alt="" />
+        <img src={loadingGif} alt="" style={{width:'100%', height:'100vh'}}/>
       ):(
       <>
          <div className="container mt-5">
